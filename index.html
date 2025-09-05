@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4-Team Pool Championship Bracket</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -125,56 +125,28 @@
             <div id="view-bracket" class="content-section">
                 <div class="bracket-container">
                     <!-- ... (Bracket HTML remains unchanged) ... -->
-                    <!-- Stage 1: Round Robin -->
                     <div class="stage">
                         <h2 class="text-2xl font-bold text-center text-gray-700 mb-4">Stage 1: Round Robin</h2>
                         <div class="space-y-4 md:round-robin-grid md:space-y-0">
-                            <!-- Week 1 -->
                             <div class="match-card">
                                 <h3 class="font-semibold text-lg text-center mb-2 text-indigo-600">Week 1</h3>
                                 <div class="space-y-2">
-                                    <div class="bg-gray-100 p-2 rounded-lg">
-                                        <div class="team"><span class="team-name">Team A</span></div>
-                                        <div class="text-center vs">VS</div>
-                                        <div class="team"><span class="team-name">Team B</span></div>
-                                    </div>
-                                    <div class="bg-gray-100 p-2 rounded-lg">
-                                        <div class="team"><span class="team-name">Team C</span></div>
-                                        <div class="text-center vs">VS</div>
-                                        <div class="team"><span class="team-name">Team D</span></div>
-                                    </div>
+                                    <div class="bg-gray-100 p-2 rounded-lg"><div class="team"><span class="team-name">Team A</span></div><div class="text-center vs">VS</div><div class="team"><span class="team-name">Team B</span></div></div>
+                                    <div class="bg-gray-100 p-2 rounded-lg"><div class="team"><span class="team-name">Team C</span></div><div class="text-center vs">VS</div><div class="team"><span class="team-name">Team D</span></div></div>
                                 </div>
                             </div>
-                            <!-- Week 2 -->
                             <div class="match-card">
                                 <h3 class="font-semibold text-lg text-center mb-2 text-indigo-600">Week 2</h3>
                                  <div class="space-y-2">
-                                    <div class="bg-gray-100 p-2 rounded-lg">
-                                        <div class="team"><span class="team-name">Team A</span></div>
-                                        <div class="text-center vs">VS</div>
-                                        <div class="team"><span class="team-name">Team C</span></div>
-                                    </div>
-                                    <div class="bg-gray-100 p-2 rounded-lg">
-                                        <div class="team"><span class="team-name">Team B</span></div>
-                                        <div class="text-center vs">VS</div>
-                                        <div class="team"><span class="team-name">Team D</span></div>
-                                    </div>
+                                    <div class="bg-gray-100 p-2 rounded-lg"><div class="team"><span class="team-name">Team A</span></div><div class="text-center vs">VS</div><div class="team"><span class="team-name">Team C</span></div></div>
+                                    <div class="bg-gray-100 p-2 rounded-lg"><div class="team"><span class="team-name">Team B</span></div><div class="text-center vs">VS</div><div class="team"><span class="team-name">Team D</span></div></div>
                                 </div>
                             </div>
-                            <!-- Week 3 -->
                             <div class="match-card md:col-span-2">
                                  <h3 class="font-semibold text-lg text-center mb-2 text-indigo-600">Week 3</h3>
                                  <div class="sm:flex sm:space-x-4 space-y-2 sm:space-y-0">
-                                    <div class="bg-gray-100 p-2 rounded-lg flex-1">
-                                        <div class="team"><span class="team-name">Team A</span></div>
-                                        <div class="text-center vs">VS</div>
-                                        <div class="team"><span class="team-name">Team D</span></div>
-                                    </div>
-                                    <div class="bg-gray-100 p-2 rounded-lg flex-1">
-                                        <div class="team"><span class="team-name">Team B</span></div>
-                                        <div class="text-center vs">VS</div>
-                                        <div class="team"><span class="team-name">Team C</span></div>
-                                    </div>
+                                    <div class="bg-gray-100 p-2 rounded-lg flex-1"><div class="team"><span class="team-name">Team A</span></div><div class="text-center vs">VS</div><div class="team"><span class="team-name">Team D</span></div></div>
+                                    <div class="bg-gray-100 p-2 rounded-lg flex-1"><div class="team"><span class="team-name">Team B</span></div><div class="text-center vs">VS</div><div class="team"><span class="team-name">Team C</span></div></div>
                                 </div>
                             </div>
                         </div>
@@ -184,46 +156,16 @@
                     <div class="stage">
                         <h2 class="text-2xl font-bold text-center text-gray-700 mb-4">Stage 2: Semi-Finals</h2>
                         <div class="space-y-8">
-                            <div class="match-card">
-                                <h3 class="font-semibold text-lg text-center mb-2">Semi-Final 1</h3>
-                                <div class="bg-sky-100 p-2 rounded-lg">
-                                    <div class="team"><span class="team-name">1st Place</span> <span class="text-sm text-gray-500">(from Stage 1)</span></div>
-                                    <div class="text-center vs">VS</div>
-                                    <div class="team"><span class="team-name">4th Place</span> <span class="text-sm text-gray-500">(from Stage 1)</span></div>
-                                </div>
-                            </div>
-                            <div class="match-card">
-                                <h3 class="font-semibold text-lg text-center mb-2">Semi-Final 2</h3>
-                                <div class="bg-sky-100 p-2 rounded-lg">
-                                    <div class="team"><span class="team-name">2nd Place</span> <span class="text-sm text-gray-500">(from Stage 1)</span></div>
-                                    <div class="text-center vs">VS</div>
-                                    <div class="team"><span class="team-name">3rd Place</span> <span class="text-sm text-gray-500">(from Stage 1)</span></div>
-                                </div>
-                            </div>
+                            <div class="match-card"><h3 class="font-semibold text-lg text-center mb-2">Semi-Final 1</h3><div class="bg-sky-100 p-2 rounded-lg"><div class="team"><span class="team-name">1st Place</span> <span class="text-sm text-gray-500">(from Stage 1)</span></div><div class="text-center vs">VS</div><div class="team"><span class="team-name">4th Place</span> <span class="text-sm text-gray-500">(from Stage 1)</span></div></div></div>
+                            <div class="match-card"><h3 class="font-semibold text-lg text-center mb-2">Semi-Final 2</h3><div class="bg-sky-100 p-2 rounded-lg"><div class="team"><span class="team-name">2nd Place</span> <span class="text-sm text-gray-500">(from Stage 1)</span></div><div class="text-center vs">VS</div><div class="team"><span class="team-name">3rd Place</span> <span class="text-sm text-gray-500">(from Stage 1)</span></div></div></div>
                         </div>
                     </div>
                     <div class="connector hidden md:flex"><div class="line"></div></div>
                     <div class="stage">
                         <h2 class="text-2xl font-bold text-center text-gray-700 mb-4">Stage 3: Finals</h2>
                         <div class="space-y-8">
-                             <div class="match-card border-2 border-amber-400">
-                                <h3 class="font-semibold text-lg text-center mb-2 text-amber-500">Championship Final</h3>
-                                <div class="bg-amber-100 p-2 rounded-lg">
-                                    <div class="team"><span class="team-name">Winner of SF1</span></div>
-                                    <div class="text-center vs">VS</div>
-                                    <div class="team"><span class="team-name">Winner of SF2</span></div>
-                                </div>
-                                <div class="text-center mt-3 font-bold text-lg text-green-600">🏆 CHAMPION 🏆</div>
-                            </div>
-                            <div class="match-card border-2 border-slate-400">
-                                <h3 class="font-semibold text-lg text-center mb-2 text-slate-500">3rd Place Match</h3>
-                                <div class="bg-slate-100 p-2 rounded-lg">
-                                    <div class="team"><span class="team-name">Loser of SF1</span></div>
-                                    <div class="text-center vs">VS</div>
-                                    <div class="team"><span class="team-name">Loser of SF2</span></div>
-                                </div>
-                                <div class="text-center mt-3 font-bold text-lg text-slate-700">🥉 3rd Place Winner 🥉</div>
-                            </div>
+                             <div class="match-card border-2 border-amber-400"><h3 class="font-semibold text-lg text-center mb-2 text-amber-500">Championship Final</h3><div class="bg-amber-100 p-2 rounded-lg"><div class="team"><span class="team-name">Winner of SF1</span></div><div class="text-center vs">VS</div><div class="team"><span class="team-name">Winner of SF2</span></div></div><div class="text-center mt-3 font-bold text-lg text-green-600">🏆 CHAMPION 🏆</div></div>
+                            <div class="match-card border-2 border-slate-400"><h3 class="font-semibold text-lg text-center mb-2 text-slate-500">3rd Place Match</h3><div class="bg-slate-100 p-2 rounded-lg"><div class="team"><span class="team-name">Loser of SF1</span></div><div class="text-center vs">VS</div><div class="team"><span class="team-name">Loser of SF2</span></div></div><div class="text-center mt-3 font-bold text-lg text-slate-700">🥉 3rd Place Winner 🥉</div></div>
                         </div>
                     </div>
                 </div>
@@ -234,142 +176,75 @@
                 <!-- ... (Rules HTML remains unchanged) ... -->
                 <h2 class="text-2xl font-bold text-center text-gray-700 mb-6">Tournament Rules</h2>
                 <div class="space-y-6 text-gray-800">
-                    <div>
-                        <h3 class="text-xl font-semibold mb-2 text-indigo-600">Match Format</h3>
-                        <p>All matches are played as a <strong>Best of 3 frames</strong>. The first team to win 2 frames wins the match. Possible scores are 2-0 or 2-1.</p>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-2 text-indigo-600">Stage 1: Round Robin</h3>
-                        <ul class="list-disc list-inside space-y-2">
-                            <li>Each of the 4 teams plays every other team exactly once.</li>
-                            <li>Teams earn <strong>1 point</strong> for a match win and <strong>0 points</strong> for a loss.</li>
-                            <li>After all matches are complete, teams are ranked 1st to 4th based on total points.</li>
-                        </ul>
-                    </div>
-                     <div>
-                        <h3 class="text-xl font-semibold mb-2 text-indigo-600">Tie-Breaker Rules</h3>
-                        <p>If two or more teams finish with the same number of points, the tie is broken using the following criteria in order:</p>
-                        <ol class="list-decimal list-inside space-y-2 mt-2 bg-gray-50 p-4 rounded-md">
-                            <li><strong>Head-to-Head Result:</strong> The winner of the match between the tied teams is ranked higher.</li>
-                            <li><strong>Frame Difference:</strong> The team with the better frame difference (Total Frames Won - Total Frames Lost) is ranked higher.</li>
-                            <li><strong>Playoff Match:</strong> If teams are still tied, a single "Best of 1" frame playoff will determine the ranking.</li>
-                        </ol>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-2 text-indigo-600">Stage 2: Knockout Finals</h3>
-                         <ul class="list-disc list-inside space-y-2">
-                            <li><strong>Semi-Finals:</strong> Matchups are based on the final Round Robin rankings:
-                                <ul class="list-['-_'] list-inside ml-4 mt-1">
-                                    <li>Semi-Final 1: <strong>1st Place vs. 4th Place</strong></li>
-                                    <li>Semi-Final 2: <strong>2nd Place vs. 3rd Place</strong></li>
-                                </ul>
-                            </li>
-                            <li><strong>Finals:</strong>
-                                 <ul class="list-['-_'] list-inside ml-4 mt-1">
-                                    <li><strong>Championship:</strong> The two winners of the semi-finals play for 1st place.</li>
-                                    <li><strong>3rd Place Match:</strong> The two losers of the semi-finals play for 3rd place.</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
+                    <div><h3 class="text-xl font-semibold mb-2 text-indigo-600">Match Format</h3><p>All matches are played as a <strong>Best of 3 frames</strong>. The first team to win 2 frames wins the match. Possible scores are 2-0 or 2-1.</p></div>
+                    <div><h3 class="text-xl font-semibold mb-2 text-indigo-600">Stage 1: Round Robin</h3><ul class="list-disc list-inside space-y-2"><li>Each of the 4 teams plays every other team exactly once.</li><li>Teams earn <strong>1 point</strong> for a match win and <strong>0 points</strong> for a loss.</li><li>After all matches are complete, teams are ranked 1st to 4th based on total points.</li></ul></div>
+                    <div><h3 class="text-xl font-semibold mb-2 text-indigo-600">Tie-Breaker Rules</h3><p>If two or more teams finish with the same number of points, the tie is broken using the following criteria in order:</p><ol class="list-decimal list-inside space-y-2 mt-2 bg-gray-50 p-4 rounded-md"><li><strong>Head-to-Head Result:</strong> The winner of the match between the tied teams is ranked higher.</li><li><strong>Frame Difference:</strong> The team with the better frame difference (Total Frames Won - Total Frames Lost) is ranked higher.</li><li><strong>Playoff Match:</strong> If teams are still tied, a single "Best of 1" frame playoff will determine the ranking.</li></ol></div>
+                    <div><h3 class="text-xl font-semibold mb-2 text-indigo-600">Stage 2: Knockout Finals</h3><ul class="list-disc list-inside space-y-2"><li><strong>Semi-Finals:</strong> Matchups are based on the final Round Robin rankings:<ul class="list-['-_'] list-inside ml-4 mt-1"><li>Semi-Final 1: <strong>1st Place vs. 4th Place</strong></li><li>Semi-Final 2: <strong>2nd Place vs. 3rd Place</strong></li></ul></li><li><strong>Finals:</strong><ul class="list-['-_'] list-inside ml-4 mt-1"><li><strong>Championship:</strong> The two winners of the semi-finals play for 1st place.</li><li><strong>3rd Place Match:</strong> The two losers of the semi-finals play for 3rd place.</li></ul></li></ul></div>
                 </div>
             </div>
 
             <!-- View 3: Examples -->
             <div id="view-examples" class="content-section hidden bg-white p-6 md:p-8 rounded-lg shadow-lg">
                 <!-- ... (Examples HTML remains unchanged) ... -->
-                <h2 class="text-2xl font-bold text-center text-gray-700 mb-6">Ranking & Tie-Breaker Examples</h2>
+                 <h2 class="text-2xl font-bold text-center text-gray-700 mb-6">Ranking & Tie-Breaker Examples</h2>
                 <div class="space-y-6 text-gray-800">
-                    <div>
-                        <h3 class="text-xl font-semibold mb-2 text-indigo-600">Example Scenario</h3>
-                        <p>Imagine the Round Robin stage finishes with these results:</p>
-                        <ul class="list-disc list-inside mt-2 text-sm">
-                            <li>Team D beats Team A (2-1), Team B (2-1), and Team C (2-0).</li>
-                            <li>Team A beats Team B (2-1) and Team C (2-0).</li>
-                            <li>Team C beats Team B (2-0).</li>
-                        </ul>
-                        <div class="overflow-x-auto mt-4">
-                            <table class="min-w-full divide-y divide-gray-200 border">
-                                <thead class="bg-gray-100">
-                                    <tr>
-                                        <th class="px-4 py-2 text-left text-sm font-semibold text-gray-600">Team</th>
-                                        <th class="px-4 py-2 text-left text-sm font-semibold text-gray-600">Wins</th>
-                                        <th class="px-4 py-2 text-left text-sm font-semibold text-gray-600">Losses</th>
-                                        <th class="px-4 py-2 text-left text-sm font-semibold text-gray-600">Points</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="bg-white divide-y divide-gray-200">
-                                    <tr><td class="px-4 py-2">Team D</td><td>3</td><td>0</td><td class="font-bold">3</td></tr>
-                                    <tr><td class="px-4 py-2">Team A</td><td>2</td><td>1</td><td class="font-bold">2</td></tr>
-                                    <tr><td class="px-4 py-2">Team C</td><td>1</td><td>2</td><td class="font-bold">1</td></tr>
-                                    <tr><td class="px-4 py-2">Team B</td><td>0</td><td>3</td><td class="font-bold">0</td></tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-2 text-indigo-600">Final Ranking & Matchups</h3>
-                        <p>Based on the table, the final ranking is straightforward:</p>
-                        <ol class="list-decimal list-inside mt-2">
-                           <li><strong>1st:</strong> Team D (3 points)</li>
-                           <li><strong>2nd:</strong> Team A (2 points)</li>
-                           <li><strong>3rd:</strong> Team C (1 point)</li>
-                           <li><strong>4th:</strong> Team B (0 points)</li>
-                        </ol>
-                        <p class="mt-4">This leads to the following Semi-Final matchups:</p>
-                        <ul class="list-disc list-inside mt-2 bg-sky-50 p-4 rounded-md">
-                            <li>SF 1: <strong>Team D (1st)</strong> vs <strong>Team B (4th)</strong></li>
-                            <li>SF 2: <strong>Team A (2nd)</strong> vs <strong>Team C (3rd)</strong></li>
-                        </ul>
-                    </div>
-                     <div>
-                        <h3 class="text-xl font-semibold mb-2 text-indigo-600">Tie-Breaker Example</h3>
-                        <p>Now, let's imagine a different scenario where Team A and Team D both finish with 2 wins and 2 points. How do we decide who is ranked higher?</p>
-                        <div class="bg-gray-50 p-4 rounded-md mt-2">
-                           <p>We use the <strong>#1 Tie-Breaker: Head-to-Head Result</strong>.</p>
-                           <p class="mt-2">In our example, <strong>Team D beat Team A (2-1)</strong> during the Round Robin stage.</p>
-                           <p class="mt-2 font-bold text-green-700">Therefore, Team D would be ranked higher than Team A.</p>
-                        </div>
-                    </div>
+                    <div><h3 class="text-xl font-semibold mb-2 text-indigo-600">Example Scenario</h3><p>Imagine the Round Robin stage finishes with these results:</p><ul class="list-disc list-inside mt-2 text-sm"><li>Team D beats Team A (2-1), Team B (2-1), and Team C (2-0).</li><li>Team A beats Team B (2-1) and Team C (2-0).</li><li>Team C beats Team B (2-0).</li></ul><div class="overflow-x-auto mt-4"><table class="min-w-full divide-y divide-gray-200 border"><thead class="bg-gray-100"><tr><th class="px-4 py-2 text-left text-sm font-semibold text-gray-600">Team</th><th class="px-4 py-2 text-left text-sm font-semibold text-gray-600">Wins</th><th class="px-4 py-2 text-left text-sm font-semibold text-gray-600">Losses</th><th class="px-4 py-2 text-left text-sm font-semibold text-gray-600">Points</th></tr></thead><tbody class="bg-white divide-y divide-gray-200"><tr><td class="px-4 py-2">Team D</td><td>3</td><td>0</td><td class="font-bold">3</td></tr><tr><td class="px-4 py-2">Team A</td><td>2</td><td>1</td><td class="font-bold">2</td></tr><tr><td class="px-4 py-2">Team C</td><td>1</td><td>2</td><td class="font-bold">1</td></tr><tr><td class="px-4 py-2">Team B</td><td>0</td><td>3</td><td class="font-bold">0</td></tr></tbody></table></div></div>
+                    <div><h3 class="text-xl font-semibold mb-2 text-indigo-600">Final Ranking & Matchups</h3><p>Based on the table, the final ranking is straightforward:</p><ol class="list-decimal list-inside mt-2"><li><strong>1st:</strong> Team D (3 points)</li><li><strong>2nd:</strong> Team A (2 points)</li><li><strong>3rd:</strong> Team C (1 point)</li><li><strong>4th:</strong> Team B (0 points)</li></ol><p class="mt-4">This leads to the following Semi-Final matchups:</p><ul class="list-disc list-inside mt-2 bg-sky-50 p-4 rounded-md"><li>SF 1: <strong>Team D (1st)</strong> vs <strong>Team B (4th)</strong></li><li>SF 2: <strong>Team A (2nd)</strong> vs <strong>Team C (3rd)</strong></li></ul></div>
+                    <div><h3 class="text-xl font-semibold mb-2 text-indigo-600">Tie-Breaker Example</h3><p>Now, let's imagine a different scenario where Team A and Team D both finish with 2 wins and 2 points. How do we decide who is ranked higher?</p><div class="bg-gray-50 p-4 rounded-md mt-2"><p>We use the <strong>#1 Tie-Breaker: Head-to-Head Result</strong>.</p><p class="mt-2">In our example, <strong>Team D beat Team A (2-1)</strong> during the Round Robin stage.</p><p class="mt-2 font-bold text-green-700">Therefore, Team D would be ranked higher than Team A.</p></div></div>
                 </div>
             </div>
 
             <!-- View 4: Stats -->
             <div id="view-stats" class="content-section hidden bg-white p-6 md:p-8 rounded-lg shadow-lg">
-                 <h2 class="text-2xl font-bold text-center text-gray-700 mb-6">Live Tournament Stats</h2>
+                 <h2 class="text-2xl font-bold text-center text-gray-700 mb-6">Live Tournament Stats (Internal)</h2>
                  <div class="bg-blue-50 border border-blue-200 text-blue-800 p-4 rounded-md mb-6">
-                    <h3 class="font-bold text-lg mb-2">How This Works</h3>
-                    <p class="text-sm">This page fetches live data from a public Google Sheet. To connect your own stats, follow these steps:</p>
-                    <ol class="list-decimal list-inside mt-2 text-sm space-y-1">
-                        <li><strong>Format Your Sheet:</strong> Create two tabs in your Google Sheet named exactly `TeamStats` and `PlayerStats`. Add headers like `Team, Wins, Losses` for teams, and `Player, Team, Wins, Losses` for players.</li>
-                        <li><strong>Publish to Web:</strong> In Google Sheets, go to `File` > `Share` > `Publish to web`. Select the specific tab (e.g., `TeamStats`), choose `Comma-separated values (.csv)`, and click `Publish`. Do this for both tabs.</li>
-                        <li><strong>Update the Code:</strong> Copy the generated links and paste them into the `teamStatsURL` and `playerStatsURL` variables in the `&lt;script&gt;` tag at the bottom of this file.</li>
+                    <h3 class="font-bold text-lg mb-2">How This Works (New Method)</h3>
+                    <p class="text-sm">This page now fetches data from a secure Google Apps Script Web App, which requires authentication. This allows you to keep the source Google Sheet private.</p>
+                    <ol class="list-decimal list-inside mt-2 text-sm space-y-2">
+                        <li>
+                            <strong>Create Apps Script:</strong> In your Google Sheet, go to `Extensions` > `Apps Script`. Delete any existing code and paste in the full code block provided below this list. Save the script project (e.g., "StatsWebApp").
+                            <pre class="bg-gray-800 text-white p-2 rounded-md text-xs mt-2 overflow-x-auto"><code>function doGet(e) {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const teamSheet = ss.getSheetByName('TeamStats');
+  const playerSheet = ss.getSheetByName('PlayerStats');
+
+  const teamData = teamSheet.getDataRange().getValues();
+  const playerData = playerSheet.getDataRange().getValues();
+
+  const stats = {
+    teams: {
+      headers: teamData.shift(),
+      rows: teamData
+    },
+    players: {
+      headers: playerData.shift(),
+      rows: playerData
+    }
+  };
+
+  return ContentService
+    .createTextOutput(JSON.stringify(stats))
+    .setMimeType(ContentService.MimeType.JSON);
+}</code></pre>
+                        </li>
+                        <li>
+                            <strong>Deploy the Web App:</strong> Click the `Deploy` button > `New deployment`.
+                            <ul>
+                                <li>- Select type `⚙️ Web app`.</li>
+                                <li>- In "Execute as", select **`Me`**.</li>
+                                <li>- In "Who has access", select **`Anyone at Rogerwilco`** (or your domain).</li>
+                                <li>- Click `Deploy`. Authorize the permissions when prompted.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Update the Code:</strong> Copy the generated `Web app URL` and paste it into the `googleWebAppURL` variable in the `&lt;script&gt;` tag at the bottom of this file.</li>
                     </ol>
                  </div>
 
                  <div id="stats-content" class="space-y-8">
                      <!-- Team Stats Section -->
-                     <div>
-                        <h3 class="text-xl font-semibold mb-2 text-indigo-600">Team Standings</h3>
-                        <div id="team-stats-container" class="overflow-x-auto">
-                            <p id="team-stats-loading" class="text-gray-500">Loading team stats...</p>
-                            <table class="min-w-full divide-y divide-gray-200 border hidden">
-                                <thead id="team-stats-head" class="bg-gray-100"></thead>
-                                <tbody id="team-stats-body" class="bg-white divide-y divide-gray-200"></tbody>
-                            </table>
-                        </div>
-                     </div>
-                      <!-- Player Stats Section -->
-                     <div>
-                        <h3 class="text-xl font-semibold mb-2 text-indigo-600">Player Leaderboard</h3>
-                        <div id="player-stats-container" class="overflow-x-auto">
-                            <p id="player-stats-loading" class="text-gray-500">Loading player stats...</p>
-                            <table class="min-w-full divide-y divide-gray-200 border hidden">
-                                <thead id="player-stats-head" class="bg-gray-100"></thead>
-                                <tbody id="player-stats-body" class="bg-white divide-y divide-gray-200"></tbody>
-                            </table>
-                        </div>
-                     </div>
+                     <div><h3 class="text-xl font-semibold mb-2 text-indigo-600">Team Standings</h3><div id="team-stats-container" class="overflow-x-auto"><p id="team-stats-loading" class="text-gray-500">Loading team stats...</p><table class="min-w-full divide-y divide-gray-200 border hidden"><thead id="team-stats-head" class="bg-gray-100"></thead><tbody id="team-stats-body" class="bg-white divide-y divide-gray-200"></tbody></table></div></div>
+                     <!-- Player Stats Section -->
+                     <div><h3 class="text-xl font-semibold mb-2 text-indigo-600">Player Leaderboard</h3><div id="player-stats-container" class="overflow-x-auto"><p id="player-stats-loading" class="text-gray-500">Loading player stats...</p><table class="min-w-full divide-y divide-gray-200 border hidden"><thead id="player-stats-head" class="bg-gray-100"></thead><tbody id="player-stats-body" class="bg-white divide-y divide-gray-200"></tbody></table></div></div>
                  </div>
             </div>
         </main>
@@ -394,17 +269,9 @@
             function switchView(viewName) {
                 Object.values(views).forEach(view => view.classList.add('hidden'));
                 Object.values(buttons).forEach(btn => btn.classList.remove('active'));
-
-                if (views[viewName]) {
-                    views[viewName].classList.remove('hidden');
-                }
-                if (buttons[viewName]) {
-                    buttons[viewName].classList.add('active');
-                }
-                // If switching to the stats view, fetch the data
-                if (viewName === 'stats') {
-                    fetchStats();
-                }
+                if (views[viewName]) views[viewName].classList.remove('hidden');
+                if (buttons[viewName]) buttons[viewName].classList.add('active');
+                if (viewName === 'stats') fetchStats();
             }
 
             buttons.bracket.addEventListener('click', () => switchView('bracket'));
@@ -412,78 +279,85 @@
             buttons.examples.addEventListener('click', () => switchView('examples'));
             buttons.stats.addEventListener('click', () => switchView('stats'));
 
-            // --- Google Sheets Stats Fetching Logic ---
+            // --- Google Sheets Stats Fetching Logic (New Method) ---
 
-            // IMPORTANT: Replace these URLs with the ones you get from "Publish to web" in Google Sheets
-            const teamStatsURL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQCgftkSqD-rTdhEbn5godfpNTSxng8xRMuLZs8kQHakUSI9abTpUE_xiNMLjq1tvqQ2P_rPzPlIrqG/pub?gid=1417398263&single=true&output=csv';
-            const playerStatsURL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQCgftkSqD-rTdhEbn5godfpNTSxng8xRMuLZs8kQHakUSI9abTpUE_xiNMLjq1tvqQ2P_rPzPlIrqG/pub?gid=0&single=true&output=csv';
-
-            // Function to fetch and display stats from a Google Sheet CSV URL
-            async function displayStats(url, type) {
-                const loadingEl = document.getElementById(`${type}-stats-loading`);
-                const tableEl = loadingEl.nextElementSibling;
+            // IMPORTANT: Replace this URL with the one you get from deploying the Google Apps Script Web App.
+            const googleWebAppURL = 'YOUR_GOOGLE_WEB_APP_URL_HERE';
+            
+            function buildTable(type, headers, rows) {
                 const headEl = document.getElementById(`${type}-stats-head`);
                 const bodyEl = document.getElementById(`${type}-stats-body`);
+                headEl.innerHTML = '';
+                bodyEl.innerHTML = '';
+
+                let headerHTML = '<tr>';
+                headers.forEach(header => {
+                    headerHTML += `<th class="px-4 py-2 text-left text-sm font-semibold text-gray-600">${header.trim()}</th>`;
+                });
+                headerHTML += '</tr>';
+                headEl.innerHTML = headerHTML;
+
+                rows.forEach(rowCells => {
+                    let rowHTML = '<tr>';
+                    rowCells.forEach(cell => {
+                        rowHTML += `<td class="px-4 py-2 whitespace-nowrap">${cell.toString().trim()}</td>`;
+                    });
+                    rowHTML += '</tr>';
+                    bodyEl.innerHTML += rowHTML;
+                });
+            }
+
+            async function fetchStats() {
+                if (statsLoaded) return; // Only fetch once per page load
+
+                const teamLoadingEl = document.getElementById('team-stats-loading');
+                const playerLoadingEl = document.getElementById('player-stats-loading');
+                const teamTableEl = teamLoadingEl.nextElementSibling;
+                const playerTableEl = playerLoadingEl.nextElementSibling;
                 
                 try {
-                    if (!url || url.includes('YOUR_')) {
-                       throw new Error("URL not configured. Please update the script.");
+                    if (!googleWebAppURL || googleWebAppURL.includes('YOUR_')) {
+                       throw new Error("Google Web App URL is not configured. Please follow the setup instructions.");
                     }
                     
-                    const response = await fetch(url);
+                    const response = await fetch(googleWebAppURL);
+                    
+                    if (response.status === 401 || response.status === 403) {
+                         throw new Error("Authorization failed. Please ensure you are logged into a Google account within the 'rogerwilco' domain.");
+                    }
                     if (!response.ok) {
                         throw new Error(`Network response was not ok: ${response.statusText}`);
                     }
                     
-                    const data = await response.text();
-                    const rows = data.trim().split('\n');
-                    const headers = rows.shift().split(',');
+                    const data = await response.json();
 
-                    // Clear previous data
-                    headEl.innerHTML = '';
-                    bodyEl.innerHTML = '';
-
-                    // Create table header
-                    let headerHTML = '<tr>';
-                    headers.forEach(header => {
-                        headerHTML += `<th class="px-4 py-2 text-left text-sm font-semibold text-gray-600">${header.trim()}</th>`;
-                    });
-                    headerHTML += '</tr>';
-                    headEl.innerHTML = headerHTML;
-
-                    // Create table body
-                    rows.forEach(rowStr => {
-                        const cells = rowStr.split(',');
-                        let rowHTML = '<tr>';
-                        cells.forEach(cell => {
-                            rowHTML += `<td class="px-4 py-2 whitespace-nowrap">${cell.trim()}</td>`;
-                        });
-                        rowHTML += '</tr>';
-                        bodyEl.innerHTML += rowHTML;
-                    });
-                    
-                    loadingEl.classList.add('hidden');
-                    tableEl.classList.remove('hidden');
+                    if (data.teams) {
+                        buildTable('team', data.teams.headers, data.teams.rows);
+                        teamLoadingEl.classList.add('hidden');
+                        teamTableEl.classList.remove('hidden');
+                    }
+                    if (data.players) {
+                        buildTable('player', data.players.headers, data.players.rows);
+                        playerLoadingEl.classList.add('hidden');
+                        playerTableEl.classList.remove('hidden');
+                    }
+                    statsLoaded = true;
 
                 } catch (error) {
-                    loadingEl.textContent = `Error loading ${type} stats: ${error.message}`;
-                    loadingEl.classList.add('text-red-500');
-                    tableEl.classList.add('hidden');
-                    console.error(`Error fetching ${type} stats:`, error);
+                    teamLoadingEl.textContent = `Error: ${error.message}`;
+                    playerLoadingEl.textContent = `Error: ${error.message}`;
+                    teamLoadingEl.classList.add('text-red-500');
+                    playerLoadingEl.classList.add('text-red-500');
+                    console.error("Error fetching stats:", error);
                 }
             }
             
             let statsLoaded = false;
-            function fetchStats() {
-                if (statsLoaded) return; // Only fetch once per page load
-                displayStats(teamStatsURL, 'team');
-                displayStats(playerStatsURL, 'player');
-                statsLoaded = true;
-            }
-
+            
             // Set initial view
             switchView('bracket');
         });
     </script>
 </body>
 </html>
+
