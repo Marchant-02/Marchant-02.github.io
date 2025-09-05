@@ -202,7 +202,7 @@
                     <p class="text-sm">This page now fetches data from a secure Google Apps Script Web App, which requires authentication. This allows you to keep the source Google Sheet private.</p>
                     <ol class="list-decimal list-inside mt-2 text-sm space-y-2">
                         <li>
-                            <strong>Create Apps Script:</strong> In your Google Sheet, go to `Extensions` > `Apps Script`. Delete any existing code and paste in the full code block provided below this list. Save the script project (e.g., "StatsWebApp").
+                            <strong>Update Apps Script:</strong> In your Google Sheet, go to `Extensions` > `Apps Script`. Replace your existing code with the updated code block below. This new version includes a crucial header to prevent CORS errors.
                             <pre class="bg-gray-800 text-white p-2 rounded-md text-xs mt-2 overflow-x-auto"><code>function doGet(e) {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   const teamSheet = ss.getSheetByName('TeamStats');
@@ -224,19 +224,14 @@
 
   return ContentService
     .createTextOutput(JSON.stringify(stats))
-    .setMimeType(ContentService.MimeType.JSON);
+    .setMimeType(ContentService.MimeType.JSON)
+    .addHeader('Access-Control-Allow-Origin', '*'); // FIX for CORS
 }</code></pre>
                         </li>
                         <li>
-                            <strong>Deploy the Web App:</strong> Click the `Deploy` button > `New deployment`.
-                            <ul>
-                                <li>- Select type `⚙️ Web app`.</li>
-                                <li>- In "Execute as", select **`Me`**.</li>
-                                <li>- In "Who has access", select **`Anyone at Rogerwilco`** (or your domain).</li>
-                                <li>- Click `Deploy`. Authorize the permissions when prompted.</li>
-                            </ul>
+                            <strong>Deploy a New Version:</strong> Click `Deploy` > `New deployment`. **You must create a new deployment to apply the code changes.** Keep the settings the same (`Execute as: Me`, `Who has access: Anyone at Rogerwilco`).
                         </li>
-                        <li><strong>Update the Code:</strong> Copy the generated `Web app URL` and paste it into the `googleWebAppURL` variable in the `&lt;script&gt;` tag at the bottom of this file.</li>
+                        <li><strong>Update the Code:</strong> Copy the new `Web app URL` and ensure it's pasted into the `googleWebAppURL` variable in the `&lt;script&gt;` tag at the bottom of this file.</li>
                     </ol>
                  </div>
 
@@ -279,10 +274,8 @@
             buttons.examples.addEventListener('click', () => switchView('examples'));
             buttons.stats.addEventListener('click', () => switchView('stats'));
 
-            // --- Google Sheets Stats Fetching Logic (New Method) ---
-
-            // IMPORTANT: Replace this URL with the one you get from deploying the Google Apps Script Web App.
-            const googleWebAppURL = 'https://script.google.com/macros/s/AKfycbwR_4x1zV-jL63G7P5aJ3Q5d6f8H7g9i0kL5N4M3o2p1C0b/exec'; // PASTE YOUR COPIED WEB APP URL HERE
+            // --- Google Sheets Stats Fetching Logic ---
+            const googleWebAppURL = 'https://script.google.com/a/macros/rogerwilco.co.za/s/AKfycbx0s1l-t7Boxc4T-HUX04ipNYVtLTKvwT6siBOWSe8uZRlm7zyS2FcJ-8VGebllqiYFRA/exec'; // PASTE YOUR COPIED WEB APP URL HERE
             
             function buildTable(type, headers, rows) {
                 const headEl = document.getElementById(`${type}-stats-head`);
@@ -360,3 +353,4 @@
     </script>
 </body>
 </html>
+
