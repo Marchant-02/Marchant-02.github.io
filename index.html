@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
     <title>4-Team Pool Championship Bracket</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -113,16 +113,18 @@
         </header>
 
         <!-- Navigation Menu -->
-        <nav class="flex justify-center items-center gap-4 mb-8">
+        <nav class="flex justify-center items-center gap-2 md:gap-4 mb-8 flex-wrap">
             <button id="btn-bracket" class="menu-btn active">Bracket</button>
             <button id="btn-rules" class="menu-btn">Rules</button>
             <button id="btn-examples" class="menu-btn">Examples</button>
+            <button id="btn-stats" class="menu-btn">Stats</button>
         </nav>
 
         <main id="main-content">
             <!-- View 1: Bracket -->
             <div id="view-bracket" class="content-section">
                 <div class="bracket-container">
+                    <!-- ... (Bracket HTML remains unchanged) ... -->
                     <!-- Stage 1: Round Robin -->
                     <div class="stage">
                         <h2 class="text-2xl font-bold text-center text-gray-700 mb-4">Stage 1: Round Robin</h2>
@@ -178,13 +180,7 @@
                         </div>
                         <p class="text-center text-gray-600 mt-4 text-sm italic">Teams are ranked 1st to 4th based on wins. Tie-breakers must be pre-defined.</p>
                     </div>
-
-                    <!-- Connector -->
-                    <div class="connector hidden md:flex">
-                        <div class="line"></div>
-                    </div>
-
-                    <!-- Stage 2: Semi-Finals -->
+                    <div class="connector hidden md:flex"><div class="line"></div></div>
                     <div class="stage">
                         <h2 class="text-2xl font-bold text-center text-gray-700 mb-4">Stage 2: Semi-Finals</h2>
                         <div class="space-y-8">
@@ -206,13 +202,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Connector -->
-                    <div class="connector hidden md:flex">
-                        <div class="line"></div>
-                    </div>
-
-                    <!-- Stage 3: Finals -->
+                    <div class="connector hidden md:flex"><div class="line"></div></div>
                     <div class="stage">
                         <h2 class="text-2xl font-bold text-center text-gray-700 mb-4">Stage 3: Finals</h2>
                         <div class="space-y-8">
@@ -241,6 +231,7 @@
 
             <!-- View 2: Rules -->
             <div id="view-rules" class="content-section hidden bg-white p-6 md:p-8 rounded-lg shadow-lg">
+                <!-- ... (Rules HTML remains unchanged) ... -->
                 <h2 class="text-2xl font-bold text-center text-gray-700 mb-6">Tournament Rules</h2>
                 <div class="space-y-6 text-gray-800">
                     <div>
@@ -286,6 +277,7 @@
 
             <!-- View 3: Examples -->
             <div id="view-examples" class="content-section hidden bg-white p-6 md:p-8 rounded-lg shadow-lg">
+                <!-- ... (Examples HTML remains unchanged) ... -->
                 <h2 class="text-2xl font-bold text-center text-gray-700 mb-6">Ranking & Tie-Breaker Examples</h2>
                 <div class="space-y-6 text-gray-800">
                     <div>
@@ -341,6 +333,45 @@
                     </div>
                 </div>
             </div>
+
+            <!-- View 4: Stats -->
+            <div id="view-stats" class="content-section hidden bg-white p-6 md:p-8 rounded-lg shadow-lg">
+                 <h2 class="text-2xl font-bold text-center text-gray-700 mb-6">Live Tournament Stats</h2>
+                 <div class="bg-blue-50 border border-blue-200 text-blue-800 p-4 rounded-md mb-6">
+                    <h3 class="font-bold text-lg mb-2">How This Works</h3>
+                    <p class="text-sm">This page fetches live data from a public Google Sheet. To connect your own stats, follow these steps:</p>
+                    <ol class="list-decimal list-inside mt-2 text-sm space-y-1">
+                        <li><strong>Format Your Sheet:</strong> Create two tabs in your Google Sheet named exactly `TeamStats` and `PlayerStats`. Add headers like `Team, Wins, Losses` for teams, and `Player, Team, Wins, Losses` for players.</li>
+                        <li><strong>Publish to Web:</strong> In Google Sheets, go to `File` > `Share` > `Publish to web`. Select the specific tab (e.g., `TeamStats`), choose `Comma-separated values (.csv)`, and click `Publish`. Do this for both tabs.</li>
+                        <li><strong>Update the Code:</strong> Copy the generated links and paste them into the `teamStatsURL` and `playerStatsURL` variables in the `&lt;script&gt;` tag at the bottom of this file.</li>
+                    </ol>
+                 </div>
+
+                 <div id="stats-content" class="space-y-8">
+                     <!-- Team Stats Section -->
+                     <div>
+                        <h3 class="text-xl font-semibold mb-2 text-indigo-600">Team Standings</h3>
+                        <div id="team-stats-container" class="overflow-x-auto">
+                            <p id="team-stats-loading" class="text-gray-500">Loading team stats...</p>
+                            <table class="min-w-full divide-y divide-gray-200 border hidden">
+                                <thead id="team-stats-head" class="bg-gray-100"></thead>
+                                <tbody id="team-stats-body" class="bg-white divide-y divide-gray-200"></tbody>
+                            </table>
+                        </div>
+                     </div>
+                      <!-- Player Stats Section -->
+                     <div>
+                        <h3 class="text-xl font-semibold mb-2 text-indigo-600">Player Leaderboard</h3>
+                        <div id="player-stats-container" class="overflow-x-auto">
+                            <p id="player-stats-loading" class="text-gray-500">Loading player stats...</p>
+                            <table class="min-w-full divide-y divide-gray-200 border hidden">
+                                <thead id="player-stats-head" class="bg-gray-100"></thead>
+                                <tbody id="player-stats-body" class="bg-white divide-y divide-gray-200"></tbody>
+                            </table>
+                        </div>
+                     </div>
+                 </div>
+            </div>
         </main>
     </div>
 
@@ -349,36 +380,106 @@
             const views = {
                 bracket: document.getElementById('view-bracket'),
                 rules: document.getElementById('view-rules'),
-                examples: document.getElementById('view-examples')
+                examples: document.getElementById('view-examples'),
+                stats: document.getElementById('view-stats')
             };
 
             const buttons = {
                 bracket: document.getElementById('btn-bracket'),
                 rules: document.getElementById('btn-rules'),
-                examples: document.getElementById('btn-examples')
+                examples: document.getElementById('btn-examples'),
+                stats: document.getElementById('btn-stats')
             };
 
             function switchView(viewName) {
-                // Hide all views
                 Object.values(views).forEach(view => view.classList.add('hidden'));
-                
-                // Deactivate all buttons
                 Object.values(buttons).forEach(btn => btn.classList.remove('active'));
 
-                // Show the selected view
                 if (views[viewName]) {
                     views[viewName].classList.remove('hidden');
                 }
-
-                // Activate the selected button
                 if (buttons[viewName]) {
                     buttons[viewName].classList.add('active');
+                }
+                // If switching to the stats view, fetch the data
+                if (viewName === 'stats') {
+                    fetchStats();
                 }
             }
 
             buttons.bracket.addEventListener('click', () => switchView('bracket'));
             buttons.rules.addEventListener('click', () => switchView('rules'));
             buttons.examples.addEventListener('click', () => switchView('examples'));
+            buttons.stats.addEventListener('click', () => switchView('stats'));
+
+            // --- Google Sheets Stats Fetching Logic ---
+
+            // IMPORTANT: Replace these URLs with the ones you get from "Publish to web" in Google Sheets
+            const teamStatsURL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQCgftkSqD-rTdhEbn5godfpNTSxng8xRMuLZs8kQHakUSI9abTpUE_xiNMLjq1tvqQ2P_rPzPlIrqG/pub?gid=1417398263&single=true&output=csv';
+            const playerStatsURL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQCgftkSqD-rTdhEbn5godfpNTSxng8xRMuLZs8kQHakUSI9abTpUE_xiNMLjq1tvqQ2P_rPzPlIrqG/pub?gid=0&single=true&output=csv';
+
+            // Function to fetch and display stats from a Google Sheet CSV URL
+            async function displayStats(url, type) {
+                const loadingEl = document.getElementById(`${type}-stats-loading`);
+                const tableEl = loadingEl.nextElementSibling;
+                const headEl = document.getElementById(`${type}-stats-head`);
+                const bodyEl = document.getElementById(`${type}-stats-body`);
+                
+                try {
+                    if (!url || url.includes('YOUR_')) {
+                       throw new Error("URL not configured. Please update the script.");
+                    }
+                    
+                    const response = await fetch(url);
+                    if (!response.ok) {
+                        throw new Error(`Network response was not ok: ${response.statusText}`);
+                    }
+                    
+                    const data = await response.text();
+                    const rows = data.trim().split('\n');
+                    const headers = rows.shift().split(',');
+
+                    // Clear previous data
+                    headEl.innerHTML = '';
+                    bodyEl.innerHTML = '';
+
+                    // Create table header
+                    let headerHTML = '<tr>';
+                    headers.forEach(header => {
+                        headerHTML += `<th class="px-4 py-2 text-left text-sm font-semibold text-gray-600">${header.trim()}</th>`;
+                    });
+                    headerHTML += '</tr>';
+                    headEl.innerHTML = headerHTML;
+
+                    // Create table body
+                    rows.forEach(rowStr => {
+                        const cells = rowStr.split(',');
+                        let rowHTML = '<tr>';
+                        cells.forEach(cell => {
+                            rowHTML += `<td class="px-4 py-2 whitespace-nowrap">${cell.trim()}</td>`;
+                        });
+                        rowHTML += '</tr>';
+                        bodyEl.innerHTML += rowHTML;
+                    });
+                    
+                    loadingEl.classList.add('hidden');
+                    tableEl.classList.remove('hidden');
+
+                } catch (error) {
+                    loadingEl.textContent = `Error loading ${type} stats: ${error.message}`;
+                    loadingEl.classList.add('text-red-500');
+                    tableEl.classList.add('hidden');
+                    console.error(`Error fetching ${type} stats:`, error);
+                }
+            }
+            
+            let statsLoaded = false;
+            function fetchStats() {
+                if (statsLoaded) return; // Only fetch once per page load
+                displayStats(teamStatsURL, 'team');
+                displayStats(playerStatsURL, 'player');
+                statsLoaded = true;
+            }
 
             // Set initial view
             switchView('bracket');
@@ -386,4 +487,3 @@
     </script>
 </body>
 </html>
-
